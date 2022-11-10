@@ -16,7 +16,18 @@
 from collections import OrderedDict
 import os
 import re
-from typing import Dict, Mapping, Optional, Sequence, Tuple, Type, Union, cast
+from typing import (
+    Dict,
+    Mapping,
+    MutableMapping,
+    MutableSequence,
+    Optional,
+    Sequence,
+    Tuple,
+    Type,
+    Union,
+    cast,
+)
 
 from google.api_core import client_options as client_options_lib
 from google.api_core import exceptions as core_exceptions
@@ -64,7 +75,7 @@ class DataPolicyServiceClientMeta(type):
 
     def get_transport_class(
         cls,
-        label: str = None,
+        label: Optional[str] = None,
     ) -> Type[DataPolicyServiceTransport]:
         """Returns an appropriate transport class.
 
@@ -343,7 +354,7 @@ class DataPolicyServiceClient(metaclass=DataPolicyServiceClientMeta):
         self,
         *,
         credentials: Optional[ga_credentials.Credentials] = None,
-        transport: Union[str, DataPolicyServiceTransport, None] = None,
+        transport: Optional[Union[str, DataPolicyServiceTransport]] = None,
         client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = DEFAULT_CLIENT_INFO,
     ) -> None:
@@ -441,12 +452,12 @@ class DataPolicyServiceClient(metaclass=DataPolicyServiceClientMeta):
 
     def create_data_policy(
         self,
-        request: Union[datapolicy.CreateDataPolicyRequest, dict] = None,
+        request: Optional[Union[datapolicy.CreateDataPolicyRequest, dict]] = None,
         *,
-        parent: str = None,
-        data_policy: datapolicy.DataPolicy = None,
+        parent: Optional[str] = None,
+        data_policy: Optional[datapolicy.DataPolicy] = None,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> datapolicy.DataPolicy:
         r"""Creates a new data policy under a project with the given
@@ -560,12 +571,12 @@ class DataPolicyServiceClient(metaclass=DataPolicyServiceClientMeta):
 
     def update_data_policy(
         self,
-        request: Union[datapolicy.UpdateDataPolicyRequest, dict] = None,
+        request: Optional[Union[datapolicy.UpdateDataPolicyRequest, dict]] = None,
         *,
-        data_policy: datapolicy.DataPolicy = None,
-        update_mask: field_mask_pb2.FieldMask = None,
+        data_policy: Optional[datapolicy.DataPolicy] = None,
+        update_mask: Optional[field_mask_pb2.FieldMask] = None,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> datapolicy.DataPolicy:
         r"""Updates the metadata for an existing data policy. The
@@ -687,11 +698,11 @@ class DataPolicyServiceClient(metaclass=DataPolicyServiceClientMeta):
 
     def delete_data_policy(
         self,
-        request: Union[datapolicy.DeleteDataPolicyRequest, dict] = None,
+        request: Optional[Union[datapolicy.DeleteDataPolicyRequest, dict]] = None,
         *,
-        name: str = None,
+        name: Optional[str] = None,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> None:
         r"""Deletes the data policy specified by its resource
@@ -779,11 +790,11 @@ class DataPolicyServiceClient(metaclass=DataPolicyServiceClientMeta):
 
     def get_data_policy(
         self,
-        request: Union[datapolicy.GetDataPolicyRequest, dict] = None,
+        request: Optional[Union[datapolicy.GetDataPolicyRequest, dict]] = None,
         *,
-        name: str = None,
+        name: Optional[str] = None,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> datapolicy.DataPolicy:
         r"""Gets the data policy specified by its resource name.
@@ -880,11 +891,11 @@ class DataPolicyServiceClient(metaclass=DataPolicyServiceClientMeta):
 
     def list_data_policies(
         self,
-        request: Union[datapolicy.ListDataPoliciesRequest, dict] = None,
+        request: Optional[Union[datapolicy.ListDataPoliciesRequest, dict]] = None,
         *,
-        parent: str = None,
+        parent: Optional[str] = None,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> pagers.ListDataPoliciesPager:
         r"""List all of the data policies in the specified parent
@@ -997,10 +1008,10 @@ class DataPolicyServiceClient(metaclass=DataPolicyServiceClientMeta):
 
     def get_iam_policy(
         self,
-        request: Union[iam_policy_pb2.GetIamPolicyRequest, dict] = None,
+        request: Optional[Union[iam_policy_pb2.GetIamPolicyRequest, dict]] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> policy_pb2.Policy:
         r"""Gets the IAM policy for the specified data policy.
@@ -1139,10 +1150,10 @@ class DataPolicyServiceClient(metaclass=DataPolicyServiceClientMeta):
 
     def set_iam_policy(
         self,
-        request: Union[iam_policy_pb2.SetIamPolicyRequest, dict] = None,
+        request: Optional[Union[iam_policy_pb2.SetIamPolicyRequest, dict]] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> policy_pb2.Policy:
         r"""Sets the IAM policy for the specified data policy.
@@ -1281,10 +1292,10 @@ class DataPolicyServiceClient(metaclass=DataPolicyServiceClientMeta):
 
     def test_iam_permissions(
         self,
-        request: Union[iam_policy_pb2.TestIamPermissionsRequest, dict] = None,
+        request: Optional[Union[iam_policy_pb2.TestIamPermissionsRequest, dict]] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> iam_policy_pb2.TestIamPermissionsResponse:
         r"""Returns the caller's permission on the specified data
