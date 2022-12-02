@@ -165,9 +165,9 @@ class ListDataPoliciesRequest(proto.Message):
             associated with. Currently filter only supports
             "policy\_tag" based filtering and OR based predicates.
             Sample filter can be "policy\_tag:
-            'projects/1/locations/us/taxonomies/2/policyTags/3'". You
-            may use wildcard such as "policy\_tag:
-            'projects/1/locations/us/taxonomies/2/*'".
+            ``'projects/1/locations/us/taxonomies/2/policyTags/3'``".
+            You may use wildcard such as "policy\_tag:
+            ``'projects/1/locations/us/taxonomies/2/*'``".
     """
 
     parent: str = proto.Field(
