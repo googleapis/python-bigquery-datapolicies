@@ -17,7 +17,7 @@
 import dataclasses
 import json  # type: ignore
 import re
-from typing import Callable, Dict, List, Optional, Sequence, Tuple, Union
+from typing import Any, Callable, Dict, List, Optional, Sequence, Tuple, Union
 import warnings
 
 from google.api_core import gapic_v1, path_template, rest_helpers, rest_streaming
@@ -435,7 +435,7 @@ class DataPolicyServiceRestTransport(DataPolicyServiceTransport):
         def __hash__(self):
             return hash("CreateDataPolicy")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, Any] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
@@ -459,7 +459,6 @@ class DataPolicyServiceRestTransport(DataPolicyServiceTransport):
                 request (~.datapolicy.CreateDataPolicyRequest):
                     The request object. Request message for the
                 CreateDataPolicy method.
-
                 retry (google.api_core.retry.Retry): Designation of what errors, if any,
                     should be retried.
                 timeout (float): The timeout for this request.
@@ -534,7 +533,7 @@ class DataPolicyServiceRestTransport(DataPolicyServiceTransport):
         def __hash__(self):
             return hash("DeleteDataPolicy")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, Any] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
@@ -558,7 +557,6 @@ class DataPolicyServiceRestTransport(DataPolicyServiceTransport):
                 request (~.datapolicy.DeleteDataPolicyRequest):
                     The request object. Request message for the
                 DeleteDataPolicy method.
-
                 retry (google.api_core.retry.Retry): Designation of what errors, if any,
                     should be retried.
                 timeout (float): The timeout for this request.
@@ -612,7 +610,7 @@ class DataPolicyServiceRestTransport(DataPolicyServiceTransport):
         def __hash__(self):
             return hash("GetDataPolicy")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, Any] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
@@ -636,7 +634,6 @@ class DataPolicyServiceRestTransport(DataPolicyServiceTransport):
                 request (~.datapolicy.GetDataPolicyRequest):
                     The request object. Request message for the GetDataPolicy
                 method.
-
                 retry (google.api_core.retry.Retry): Designation of what errors, if any,
                     should be retried.
                 timeout (float): The timeout for this request.
@@ -700,7 +697,7 @@ class DataPolicyServiceRestTransport(DataPolicyServiceTransport):
         def __hash__(self):
             return hash("GetIamPolicy")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, Any] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
@@ -774,7 +771,8 @@ class DataPolicyServiceRestTransport(DataPolicyServiceTransport):
                           "condition": {
                             "title": "expirable access",
                             "description": "Does not grant access after Sep 2020",
-                            "expression": "request.time < timestamp('2020-10-01T00:00:00.000Z')",
+                            "expression": "request.time <
+                            timestamp('2020-10-01T00:00:00.000Z')",
                           }
                         }
                       ],
@@ -869,7 +867,7 @@ class DataPolicyServiceRestTransport(DataPolicyServiceTransport):
         def __hash__(self):
             return hash("ListDataPolicies")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, Any] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
@@ -893,7 +891,6 @@ class DataPolicyServiceRestTransport(DataPolicyServiceTransport):
                 request (~.datapolicy.ListDataPoliciesRequest):
                     The request object. Request message for the
                 ListDataPolicies method.
-
                 retry (google.api_core.retry.Retry): Designation of what errors, if any,
                     should be retried.
                 timeout (float): The timeout for this request.
@@ -961,7 +958,7 @@ class DataPolicyServiceRestTransport(DataPolicyServiceTransport):
         def __hash__(self):
             return hash("RenameDataPolicy")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, Any] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
@@ -985,7 +982,6 @@ class DataPolicyServiceRestTransport(DataPolicyServiceTransport):
                 request (~.datapolicy.RenameDataPolicyRequest):
                     The request object. Request message for the
                 RenameDataPolicy method.
-
                 retry (google.api_core.retry.Retry): Designation of what errors, if any,
                     should be retried.
                 timeout (float): The timeout for this request.
@@ -1060,7 +1056,7 @@ class DataPolicyServiceRestTransport(DataPolicyServiceTransport):
         def __hash__(self):
             return hash("SetIamPolicy")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, Any] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
@@ -1134,7 +1130,8 @@ class DataPolicyServiceRestTransport(DataPolicyServiceTransport):
                           "condition": {
                             "title": "expirable access",
                             "description": "Does not grant access after Sep 2020",
-                            "expression": "request.time < timestamp('2020-10-01T00:00:00.000Z')",
+                            "expression": "request.time <
+                            timestamp('2020-10-01T00:00:00.000Z')",
                           }
                         }
                       ],
@@ -1229,7 +1226,7 @@ class DataPolicyServiceRestTransport(DataPolicyServiceTransport):
         def __hash__(self):
             return hash("TestIamPermissions")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, Any] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
@@ -1326,7 +1323,7 @@ class DataPolicyServiceRestTransport(DataPolicyServiceTransport):
         def __hash__(self):
             return hash("UpdateDataPolicy")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, Any] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
@@ -1350,7 +1347,6 @@ class DataPolicyServiceRestTransport(DataPolicyServiceTransport):
                 request (~.datapolicy.UpdateDataPolicyRequest):
                     The request object. Response message for the
                 UpdateDataPolicy method.
-
                 retry (google.api_core.retry.Retry): Designation of what errors, if any,
                     should be retried.
                 timeout (float): The timeout for this request.

@@ -1,5 +1,31 @@
 # Changelog
 
+## [0.3.2](https://github.com/googleapis/python-bigquery-datapolicies/compare/v0.3.1...v0.3.2) (2023-03-23)
+
+
+### Documentation
+
+* Fix formatting of request arg in docstring ([#30](https://github.com/googleapis/python-bigquery-datapolicies/issues/30)) ([4434913](https://github.com/googleapis/python-bigquery-datapolicies/commit/443491312e530fa1186d05fdcda4b246fe4eecb0))
+
+## [0.3.1](https://github.com/googleapis/python-bigquery-datapolicies/compare/v0.3.0...v0.3.1) (2023-01-20)
+
+
+### Bug Fixes
+
+* Add context manager return types ([0bd662c](https://github.com/googleapis/python-bigquery-datapolicies/commit/0bd662cacca29c1d1662eeb6aaa0911f44b23afa))
+
+
+### Documentation
+
+* Add documentation for enums ([0bd662c](https://github.com/googleapis/python-bigquery-datapolicies/commit/0bd662cacca29c1d1662eeb6aaa0911f44b23afa))
+
+## [0.3.0](https://github.com/googleapis/python-bigquery-datapolicies/compare/v0.2.0...v0.3.0) (2023-01-10)
+
+
+### Features
+
+* Add support for python 3.11 ([#16](https://github.com/googleapis/python-bigquery-datapolicies/issues/16)) ([f548773](https://github.com/googleapis/python-bigquery-datapolicies/commit/f548773a7fab6cc97829c1021831e4850fe6ada5))
+
 ## [0.2.0](https://github.com/googleapis/python-bigquery-datapolicies/compare/v0.1.1...v0.2.0) (2022-12-06)
 
 
